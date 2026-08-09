@@ -140,3 +140,43 @@ button:hover {
         transform: translateY(-12px) rotate(5deg);
     }
 }
+
+.character {
+    width: 280px;
+    max-width: 75vw;
+    border-radius: 25px;
+    filter: drop-shadow(0 10px 20px rgba(255, 105, 150, 0.25));
+    animation: characterAppear 1s ease;
+}
+
+.hearts {
+    margin-top: 20px;
+    font-size: 28px;
+    animation: heartsFloat 2s ease-in-out infinite;
+}
+
+@keyframes characterAppear {
+    0% {
+        opacity: 0;
+        transform: scale(0.5) translateY(30px);
+    }
+
+    70% {
+        transform: scale(1.05) translateY(-5px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+@keyframes heartsFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
