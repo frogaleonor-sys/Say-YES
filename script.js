@@ -51,9 +51,16 @@ noButton.style.padding = `${noSize / 2}px ${noSize}px`;
 yesButton.addEventListener("click", () => {
     document.body.innerHTML = `
         <div class="success">
-            <div class="flower">🌷</div>
+            <img 
+                src="cute-character.png" 
+                alt="Cute character"
+                class="character"
+            >
+
             <h1>YAY!! 💕</h1>
             <p>I knew you'd say yes 🥹</p>
+
+            <div class="hearts">💗 💕 💗 💕 💗</div>
         </div>
     `;
 });
