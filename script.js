@@ -3,6 +3,7 @@ const noButton = document.getElementById("no");
 const question = document.querySelector("h1");
 
 let yesSize = 20;
+let noSize = 20;
 let noClicks = 0;
 
 const messages = [
@@ -16,6 +17,15 @@ const messages = [
 
 noButton.addEventListener("click", () => {
     noClicks++;
+    // Make NO smaller
+noSize -= 3;
+
+if (noSize < 8) {
+    noSize = 8;
+}
+
+noButton.style.fontSize = `${noSize}px`;
+noButton.style.padding = `${noSize / 2}px ${noSize}px`;
 
     // Make YES bigger
     yesSize += 10;
